@@ -19,12 +19,8 @@ This tool:
 
 ---
 
-## 📁 Input Format (CSV)
+## How to Run
 
-The CSV file should have the following format:
-
-```csv
-tx_id,size,fee
-a1b2,400,2000
-b3c4,600,3000
-...
+```plaintext
+g++ -std=c++17 -O2 main.cpp -o block
+./block bitcoin.csv
