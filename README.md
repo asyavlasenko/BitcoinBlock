@@ -19,8 +19,30 @@ This tool:
 
 ---
 
-## How to Run
+## 🚀 How to Run
 
-```plaintext
+```bash
 g++ -std=c++17 -O2 main.cpp -o block
 ./block bitcoin.csv
+```
+
+Replace `bitcoin.csv` with your transaction file.  
+
+---
+
+## 🧮 Time Complexity (Big O)
+
+- Reading transactions from CSV: **O(N)**
+- Sorting transactions by fee-per-byte: **O(N log N)**
+- Greedy selection of transactions for block: **O(N)**
+
+> **Overall time complexity:**  
+> \> `O(N log N)` — dominated by the sorting step
+
+This greedy approach is efficient and works well in practice, especially when:
+- Transactions are independent (no dependencies like in real Bitcoin mempool)
+- You only aim to maximize fee-per-byte ratio
+
+> ⚠️ Note: This is not optimal for the general 0/1 Knapsack Problem, but is a **fast and practical heuristic** for large datasets.
+
+---
