@@ -43,6 +43,6 @@ This greedy approach is efficient and works well in practice, especially when:
 - Transactions are independent (no dependencies like in real Bitcoin mempool)
 - You only aim to maximize fee-per-byte ratio
 
-> ⚠️ Note: This is not optimal for the general 0/1 Knapsack Problem, but is a **fast and practical heuristic** for large datasets.
+> Note: This is not optimal for the general 0/1 Knapsack Problem, but is a **fast and practical heuristic** for large datasets.
 
 ---
